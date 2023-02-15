@@ -1,10 +1,10 @@
-const input = document.getElementById("campo");
+const input = document.querySelector(".cpf");
 
 input.addEventListener("keyup", formatarCPF);
 
 function formatarCPF(e){
 
-var v=e.target.value.replace(/\D/g,"");
+let v=e.target.value.replace(/\D/g,"");
 
 v=v.replace(/(\d{3})(\d)/,"$1.$2");
 
