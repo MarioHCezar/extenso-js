@@ -1,3 +1,6 @@
+//+ Carlos R. L. Rodrigues
+//@ http://jsfromhell.com/string/extenso [rev. #3]
+
 String.prototype.extenso = function (c) {
   var ex = [
     [
