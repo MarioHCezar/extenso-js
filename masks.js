@@ -1,31 +1,62 @@
-function mask(o, f) {
-  v_obj = o;
-  v_fun = f;
-  setTimeout("execmask()", 1);
-}
+const input = document.getElementById("campo");
 
-function execmask() {
-  v_obj.value = v_fun(v_obj.value);
-}
+input.addEventListener("keyup", formatarCPF);
 
-function maskcpf(v) {
-  v = v.replace(/\D/g, "");
-  v = v.replace(/(\d{3})(\d)/, "$1.$2");
-  v = v.replace(/(\d{3})(\d)/, "$1.$2");
-  v = v.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
-  return v;
-}
+function formatarCPF(e){
 
-function idcss(el) {
-  return document.getElementById(el);
-}
+var v=e.target.value.replace(/\D/g,"");
 
-window.onload = function () {
-  idcss("cpf").setAttribute("maxlength", 14);
-  idcss("cpf").onkeyup = function () {
-    mask(this, maskcpf);
-  };
-};
+v=v.replace(/(\d{3})(\d)/,"$1.$2");
+
+v=v.replace(/(\d{3})(\d)/,"$1.$2");
+
+v=v.replace(/(\d{3})(\d{1,2})$/,"$1-$2");
+
+e.target.value = v;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+  
+  
+
+ 
+
+
+ 
+
+ 
+ 
+ 
+
+  
+
+
+ 
+  
+   
 
 const input = document.querySelector("#valor");
 
