@@ -22,7 +22,7 @@ function idcss(el) {
 
 window.onload = function () {
   idcss("cpf").setAttribute("maxlength", 14);
-  idcss("cpf").onkeydown = function () {
+  idcss("cpf").onkeyup = function () {
     mask(this, maskcpf);
   };
 };
