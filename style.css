@@ -17,6 +17,36 @@ body {
   flex-direction: column;
 }
 
+.container {
+  text-align: center;
+  width: 100%;
+  margin: 0px 0;
+  padding: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+form label {
+  display: flex;
+  font-size: 20px;
+}
+
+form input {
+  display: inline-block;
+  margin: 0 0 20px;
+  padding: 10px 25px;
+  width: 100%;
+}
+
+.botao{
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
 .titulo {
   display: flex;
   align-items: center;
