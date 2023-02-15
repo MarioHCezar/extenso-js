@@ -31,9 +31,9 @@ form {
   width: 300px;
 }
 
-form label {
+label {
   display: flex;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 form input {
@@ -48,6 +48,7 @@ form input {
     margin-top: 1rem;
     padding: 1rem;
     font-weight: 700;
+    background: #007acc;
 }
 
 label {
