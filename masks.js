@@ -1,64 +1,21 @@
-const input = document.querySelector(".cpf");
+const cpf = document.querySelector(".cpf");
 
 input.addEventListener("keyup", formatarCPF);
 
 function formatarCPF(e){
 
-let v=e.target.value.replace(/\D/g,"");
+let valor =e.target.value.replace(/\D/g,"");
 
-v=v.replace(/(\d{3})(\d)/,"$1.$2");
+valor=valor.replace(/(\d{3})(\d)/,"$1.$2");
 
-v=v.replace(/(\d{3})(\d)/,"$1.$2");
+valor=valor.replace(/(\d{3})(\d)/,"$1.$2");
 
-v=v.replace(/(\d{3})(\d{1,2})$/,"$1-$2");
+valor=valor.replace(/(\d{3})(\d{1,2})$/,"$1-$2");
 
-e.target.value = v;
+e.target.value = valor;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-  
-  
-
- 
-
-
- 
-
- 
- 
- 
-
-  
-
-
- 
-  
-   
-
-const input = document.querySelector("#valor");
+const valor = document.querySelector("#valor");
 
 input.addEventListener("keyup", formatarMoeda);
 
