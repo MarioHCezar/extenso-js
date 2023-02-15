@@ -30,7 +30,7 @@ String.prototype.extenso = function (c) {
       "vinte",
       "trinta",
       "quarenta",
-      "cinqüenta",
+      "cinquenta",
       "sessenta",
       "setenta",
       "oitenta",
