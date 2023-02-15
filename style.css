@@ -1,0 +1,60 @@
+html {
+  color-scheme: dark light;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container_dec {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 2rem;
+  margin: 1rem;
+  text-align: justify;
+}
+
+.opcoes {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.container_dec {
+  display: none;
+}
+
+.assinatura{
+    margin-top: 2rem;
+}
+
+.abono{
+    margin-top: 2rem;
+}
+
+@media print {
+  .container_dec {
+    display: block;
+  }
+  .container {
+    display: none;
+  }
+}
