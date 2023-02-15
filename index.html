@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="input.css" />
     <script src="index.js" defer></script>
     <script src="extenso.js" defer></script>
+    <script src="masks.js" defer></script>
   </head>
   <body>
     <div class="container">
@@ -17,39 +18,47 @@
         <div class="form">
           <div>
             <label for="nome">Nome</label>
-            <input type="text" id="nome" />
+            <input type="text" id="nome" required />
           </div>
           <div>
             <label for="endereco">Endereço</label>
-            <input type="text" id="endereco" />
+            <input type="text" id="endereco" required />
           </div>
           <div>
+            <div class="select">
+              <select id="cpf-cnpj">
+                <option value="cpf" id="selectCPF">CPF</option>
+                <option value="cpnj" id="selectCNPJ">CNPJ</option>
+              </select>
+            </div>
+
             <label for="documento">CPF/CNPJ</label>
-            <input type="text" id="documento" />
+            <input type="text" id="documento" required />
           </div>
+
           <div>
             <label for="processo">Número do processo</label>
-            <input type="text" id="processo" />
+            <input type="text" id="processo" required />
           </div>
           <div>
             <label for="vara">Vara</label>
-            <input type="text" id="vara" />
+            <input type="text" id="vara" required/>
           </div>
           <div>
             <label for="secao">Seção Judiciária</label>
-            <input type="text" id="secao" />
+            <input type="text" id="secao" required/>
           </div>
           <div>
             <label for="valor">Valor</label>
-            <input type="text" id="valor" />
+            <input type="text" id="valor" required/>
           </div>
           <div>
             <label for="local">Local</label>
-            <input type="text" id="local" />
+            <input type="text" id="local" required/>
           </div>
           <div>
             <label for="data">Data</label>
-            <input type="date" id="data" />
+            <input type="date" id="data" required/>
           </div>
         </div>
         <input class="botao" type="submit" value="Gerar Formulario" />
@@ -72,12 +81,12 @@
 
       <div class="opcoes">
         <div class="primeira-opcao">
-          <input type="checkbox" name="opcao" id="opcao" />o montante de R$
+          <input type="checkbox" name="opcao" id="checkCPF" />o montante de R$
           <span class="span valor"></span>(
           <span class="extenso">(indicação do valor por extenso)</span>)
           constitui rendimento isento ou não-tributável.
           <div class="segunda-opcao">
-            <input type="checkbox" name="opcao" id="opcao" />
+            <input type="checkbox" name="opcao" id="checkCNPJ" />
             está inscrita no Sistema Integrado de Pagamento de Impostos e
             Contribuições das Microempresas e das Empresas de Pequeno Porte
             (Simples).
