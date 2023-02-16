@@ -54,6 +54,7 @@ form input {
   opacity: 1;
   color: #f0f0f0;
   border: none;
+  font-size: 1.2rem;
 }
 
 .botao__disabled {
