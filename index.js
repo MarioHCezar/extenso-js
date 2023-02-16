@@ -3,7 +3,7 @@ const botao = document.querySelector(".botao");
 const pf = document.querySelector("#checkCPF");
 const cnpj = document.querySelector("#checkCNPJ");
 const select = document.querySelector("select");
-const cpf = document.querySelector(".cpf");
+//const cpf = document.querySelector(".cpf");
 
 let nome_dec = document.querySelector(".nome");
 let endereco_dec = document.querySelector(".endereco");
