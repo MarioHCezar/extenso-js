@@ -3,6 +3,7 @@ const botao = document.querySelector(".botao");
 const pf = document.querySelector("#checkCPF");
 const pj = document.querySelector("#checkCNPJ");
 const select = document.querySelector("select");
+const documento = document.querySelector("#documento");
 
 let nome_dec = document.querySelector(".nome");
 let endereco_dec = document.querySelector(".endereco");
@@ -55,6 +56,7 @@ botao.addEventListener("click", () => {
     pf.checked = true;
   } else {
     pj.checked = true;
+    document.maxLength = 18;
   }
   local_dec.innerText = `${form.local.value}, `;
   let data = new Date(form.data.value);
