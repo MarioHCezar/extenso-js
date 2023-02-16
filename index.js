@@ -61,11 +61,10 @@ botao.addEventListener("click", () => {
   local_dec.innerText = `${form.local.value}, `;
   let data = new Date(form.data.value);
   data_dec.innerText = `${data.toLocaleDateString("pt-BR", {
-    timeZone: 'UTC', 
+    timeZone: "UTC", 
     day: "numeric",
     month: "long",
     year: "numeric"
-  }
   })}.`;
   print();
 });
