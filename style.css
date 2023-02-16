@@ -6,9 +6,6 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 1.2rem;
 }
 
@@ -33,42 +30,46 @@ form {
 
 label {
   display: flex;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  font-family: sans-serif;
+  font-size: 1rem;
+  padding-right: 10px;
 }
 
 form input {
   display: inline-block;
+  border: none;
+  border-radius: 5px;
   margin: 0 0 20px;
   padding: 10px 20px;
   width: 100%;
   font-size: 1.2rem;
 }
 
-.botao{
-    margin-top: 1rem;
-    padding: 1rem;
-    font-weight: 700;
-    background: #007acc;
-    color: #f0f0f0;
-    border: none;
+.botao {
+  margin-top: 1rem;
+  padding: 1rem;
+  font-weight: 700;
+  background: #007acc;
+  opacity: 1;
+  color: #f0f0f0;
+  border: none;
 }
 
-label {
-    font-family: sans-serif;
-    font-size: 1rem;
-    padding-right: 10px;
+.botao__disabled {
+  opacity: 0.5;
 }
 
 select {
-    font-size: 0.9rem;
-    padding: 2px 5px;
+  font-size: 0.9rem;
+  padding: 2px 5px;
 }
 
-.valor{
+.valor {
   margin-right: 1rem;
 }
 
-.select{
+.select {
   display: flex;
   align-items: center;
   margin-top: 20px;
@@ -100,12 +101,12 @@ select {
   display: none;
 }
 
-.assinatura{
-    margin-top: 2rem;
+.assinatura {
+  margin-top: 2rem;
 }
 
-.abono{
-    margin-top: 2rem;
+.abono {
+  margin-top: 2rem;
 }
 
 @media print {
@@ -114,5 +115,8 @@ select {
   }
   .container {
     display: none;
+  }
+  @page{
+    size: auto;
   }
 }
