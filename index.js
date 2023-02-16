@@ -36,6 +36,7 @@ inputs.forEach((input) => {
       botao.classList.remove("botao__disabled");
     } else {
       botao.disabled = true;
+botao.classList.add("botao__disabled")
     }
   });
 });
@@ -54,7 +55,6 @@ botao.addEventListener("click", () => {
     pf.checked = true;
   } else {
     pj.checked = true;
-    cpf.maxLength = 18;
   }
   local_dec.innerText = `${form.local.value}, `;
   let data = new Date(form.data.value);
