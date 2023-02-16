@@ -39,7 +39,7 @@ e.target.value = v;
 } 
 
 //cnpj
-const input = document.querySelector(".documento");
+const input = document.querySelector("#documento");
 input.addEventListener("keyup", formatarCNPJ);
 
 function formatarCNPJ(e){
