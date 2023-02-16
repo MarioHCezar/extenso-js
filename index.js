@@ -63,5 +63,5 @@ botao.addEventListener("click", () => {
     month: "long",
     year: "numeric",
   })}.`;
-  print();
+  //print();
 });
