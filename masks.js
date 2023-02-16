@@ -20,6 +20,7 @@ e.target.value = v;
 }
 
 //cpf
+const cpf = document.querySelector(".cpf");
 
 cpf.addEventListener("keyup", formatarCPF);
 
