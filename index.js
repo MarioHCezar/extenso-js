@@ -56,7 +56,7 @@ botao.addEventListener("click", () => {
     pf.checked = true;
   } else {
     pj.checked = true;
-    document.maxLength = 18;
+    documento.maxLength = 18;
   }
   local_dec.innerText = `${form.local.value}, `;
   let data = new Date(form.data.value);
