@@ -38,7 +38,7 @@ label {
 
 form input {
   display: inline-block;
-  border: none;
+  border: 1px solid #007acc9a;
   border-radius: 5px;
   margin: 0 0 20px;
   padding: 10px 20px;
