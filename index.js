@@ -82,5 +82,5 @@ botao.addEventListener("click", (e) => {
     year: "numeric",
 
   })}.`;
-  print();
+  window.print();
 });
