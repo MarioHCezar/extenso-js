@@ -47,13 +47,14 @@ inputs.forEach((input) => {
     } else {
       botao.disabled = true;
 
-botao.classList.add("botao__disabled")
+      botao.classList.add("botao__disabled")
 
     }
   });
 });
 
-botao.addEventListener("click", () => {
+botao.addEventListener("click", (e) => {
+  e.preventDefault()
   nome_dec.innerText = form.nome.value;
   endereco_dec.innerText = `${form.endereco.value}, ${form.numero.value}, ${form.bairro.value}, ${form.cidade.value}/${form.uf.value}`;
   documento_dec.innerText = form.documento.value;
