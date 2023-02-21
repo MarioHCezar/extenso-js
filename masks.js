@@ -1,58 +1,66 @@
-//valor
-const input = document.querySelector("#valor");
-
-input.addEventListener("keyup", formatarMoeda); 
-
-function formatarMoeda(e) {
-
-let v = e.target.value.replace(/\D/g,"");
-
-v = (v/100).toFixed(2) + "";
-
-v = v.replace(".", ",");
-
-v = v.replace(/(\d)(\d{3})(\d{3}),/g, "$1.$2.$3,");
-
-v = v.replace(/(\d)(\d{3}),/g, "$1.$2,");
-
-e.target.value = v;
-
+function formataCPF() {
+  documento.addEventListener("input", () => {
+    documento.value = documento.value
+      .replace(/(\D)/g, "")
+      .replace(/(\d{3})(\d)/, "$1.$2")
+      .replace(/(\d{3})(\d)/, "$1.$2")
+      .replace(/(\d{3})(\d)/, "$1-$2");
+  });
 }
 
-//cpf
-const cpf = document.querySelector(".cpf");
+function formataCNPJ() {
+  documento.addEventListener("input", () => {
+    documento.value = documento.value
+      .replace(/(\D)/g, "")
+      .replace(/(\d{2})(\d)/, "$1.$2")
+      .replace(/(\d{3})(\d)/, "$1.$2")
+      .replace(/(\d{3})(\d)/, "$1/$2")
+      .replace(/(\d{4})(\d)/, "$1-$2")
+  });
+}
 
-cpf.addEventListener("keyup", formatarCPF);
+formataCPF();
 
-function formatarCPF(e){
+window.formataDocumento = () =>{
 
-var v=e.target.value.replace(/\D/g,"");
+  select.addEventListener("change", () => {
+    documento.value = "";
+  
+    if (select.selectedIndex === 0) {
+      console.log("cpf");
+      documento.maxLength = 14;
+      console.log(documento);
+      formataCPF();
+    }
+    if (select.selectedIndex === 1) {
+      console.log("cnpj");
+      documento.maxLength = 18;
+      console.log(documento);
+      formataCNPJ();
+    }
+  
+    documento.value = "";
+  });
+}
 
-v=v.replace(/(\d{3})(\d)/,"$1.$2");
+formataDocumento()
 
-v=v.replace(/(\d{3})(\d)/,"$1.$2");
+function formataCEP() {
+  cep.addEventListener("input", () => {
+    cep.value = cep.value.replace(/(\D)/g, "").replace(/(\d{5})(\d)/, "$1-$2");
+  });
+}
 
-v=v.replace(/(\d{3})(\d{1,2})$/,"$1-$2");
+valor.addEventListener("input", formatarMoeda);
+function formatarMoeda(e) {
+  let real = e.target.value.replace(/\D/g, "");
+  real = (real / 100).toFixed(2) + "";
+  real = real.replace(".", ",");
+  real = real.replace(/(\d)(\d{3})(\d{3}),/g, "$1.$2.$3,");
+  real = real.replace(/(\d)(\d{3}),/g, "$1.$2,");
+  e.target.value = real;
+}
 
-e.target.value = v;
 
-} 
+formataCEP();
 
-//cnpj
-// const input = document.querySelector("#documento");
-// input.addEventListener("keyup", formatarCNPJ);
-
-// function formatarCNPJ(e){
-
-// var v= e.target.value.replace(/\D/g,"");
-
-// v=v.replace(/^(\d{2})(\d)/,"$1.$2");
-
-// v=v.replace(/^(\d{2})\.(\d{3})(\d)/,"$1.$2.$3");
-
-// v=v.replace(/\.(\d{3})(\d)/,".$1/$2");
-
-// v=v.replace(/(\d{4})(\d)/,"$1-$2");  
-
-// e.target.value = v;
-// }
