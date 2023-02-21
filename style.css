@@ -9,11 +9,6 @@ body {
   font-size: 1.2rem;
 }
 
-.form {
-  display: flex;
-  flex-direction: column;
-}
-
 .container {
   text-align: center;
   width: 100%;
@@ -22,10 +17,26 @@ body {
   height: 100vh;
 }
 
+.titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
 form {
   display: flex;
   flex-direction: column;
   width: 300px;
+}
+
+.field{
+  margin-left: 50px
 }
 
 label {
@@ -48,12 +59,15 @@ form input {
 
 .botao {
   margin-top: 1rem;
+  margin-left: 80px;
   padding: 1rem;
+  font-size: 1.2rem;
   font-weight: 700;
   background: #007acc;
   opacity: 1;
   color: #f0f0f0;
   border: none;
+  border-radius: 5px;
 }
 
 .botao__disabled {
@@ -74,12 +88,6 @@ select {
   align-items: center;
   margin-top: 20px;
   margin-bottom: 30px;
-}
-
-.titulo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .container_dec {
@@ -116,7 +124,7 @@ select {
   .container {
     display: none;
   }
-  @page{
+  @page {
     size: auto;
   }
 }

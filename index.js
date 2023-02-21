@@ -1,19 +1,26 @@
 const form = document.querySelector("form");
+const valor = document.querySelector("#valor");
+const cep = document.querySelector("#cep");
+const endereco = document.querySelector("#endereco");
+const bairro = document.querySelector("#bairro");
+const cidade = document.querySelector("#cidade");
+const uf = document.querySelector("#uf");
+const documento = document.querySelector("#documento");
 const botao = document.querySelector(".botao");
 const pf = document.querySelector("#checkCPF");
 const pj = document.querySelector("#checkCNPJ");
 const select = document.querySelector("select");
 
-let nome_dec = document.querySelector(".nome");
-let endereco_dec = document.querySelector(".endereco");
-let documento_dec = document.querySelector(".documento");
-let processo_dec = document.querySelector(".processo");
-let vara_dec = document.querySelector(".vara");
-let secao_dec = document.querySelector(".secao");
-let valor_dec = document.querySelector(".valor");
-let extenso_dec = document.querySelector(".extenso");
-let local_dec = document.querySelector(".local");
-let data_dec = document.querySelector(".data");
+const nome_dec = document.querySelector(".nome");
+const endereco_dec = document.querySelector(".endereco");
+const documento_dec = document.querySelector(".documento");
+const processo_dec = document.querySelector(".processo");
+const vara_dec = document.querySelector(".vara");
+const secao_dec = document.querySelector(".secao");
+const valor_dec = document.querySelector(".valor");
+const extenso_dec = document.querySelector(".extenso");
+const local_dec = document.querySelector(".local");
+const data_dec = document.querySelector(".data");
 botao.classList.add("botao__disabled");
 
 function checkInputs(inputs) {
@@ -24,7 +31,6 @@ function checkInputs(inputs) {
     }
   });
   return filled;
-
 }
 
 let inputs = document.querySelectorAll("input");
@@ -42,7 +48,7 @@ inputs.forEach((input) => {
 
 botao.addEventListener("click", () => {
   nome_dec.innerText = form.nome.value;
-  endereco_dec.innerText = form.endereco.value;
+  endereco_dec.innerText = `${form.endereco.value}, ${form.numero.value}, ${form.bairro.value}, ${form.cidade.value}/${form.uf.value}`;
   documento_dec.innerText = form.documento.value;
   processo_dec.innerText = form.processo.value;
   vara_dec.innerText = form.vara.value;
@@ -52,13 +58,16 @@ botao.addEventListener("click", () => {
   extenso_dec.innerText = extenso.extenso(",");
   if (select.options[select.selectedIndex].value === "cpf") {
     pf.checked = true;
+    pj.checked = false;
   } else {
     pj.checked = true;
-    cpf.maxLength = 18;
+    pf.checked = false;
   }
+
   local_dec.innerText = `${form.local.value}, `;
   let data = new Date(form.data.value);
   data_dec.innerText = `${data.toLocaleDateString("pt-BR", {
+    timeZone: "UTC",
     day: "numeric",
     month: "long",
     year: "numeric",
