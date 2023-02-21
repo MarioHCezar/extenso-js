@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulário IR</title>
     <link rel="stylesheet" href="style.css" />
+
     <script src="index.js" defer></script>
     <script src="masks.js" defer></script>
     <script src="extenso.js" defer></script>
     <script src="buscaCep.js" defer></script>
+
   </head>
   <body>
     <div class="container">
@@ -18,15 +20,18 @@
         <div class="form">
           <div class="field">
             <label for="nome">Nome</label>
+
             <input type="text" id="nome" name="nome" />
           </div>
           <div class="field">
             <label for="cep">CEP</label>
             <input type="text" id="cep" maxlength="9" />
+
           </div>
           <div class="field">
             <label for="endereco">Endereço</label>
             <input type="text" id="endereco" />
+
           </div>
           <div class="field">
             <label for="bairro">Bairro</label>
@@ -35,6 +40,7 @@
           <div class="field">
             <label for="cidade">Cidade</label>
             <input type="text" id="cidade" />
+
           </div>
           <div class="field">
             <label for="uf">UF</label>
@@ -50,10 +56,12 @@
                 <option value="cpf" id="selectCPF">CPF</option>
                 <option value="cpnj" id="selectCNPJ">CNPJ</option>
               </select>
+
             </label>
             <input type="text" id="documento" class="pf-pj" maxlength="14" />
           </div>
           <div class="field">
+
             <label for="processo">Número do processo</label>
             <input type="text" id="processo" />
           </div>
@@ -67,7 +75,9 @@
           </div>
           <div class="field">
             <label for="valor">Valor</label>
+
             <input type="text" id="valor" placeholder="0,00" maxlength="14" />
+
           </div>
           <div class="field">
             <label for="local">Local</label>
@@ -86,7 +96,9 @@
     <div class="container_dec">
       <h2 class="titulo">Declaração para não incidência de IRRF</h2>
       <p>
+
         <span class="nome">Nome</span>, residente ou domiciliado(a) no endereço
+
         <span class="endereco">(endereço completo)</span>, inscrito(a) no
         CPF/CNPJ sob o nº
         <span class="documento" id="cpf">__________________</span>, para fins da
@@ -98,7 +110,6 @@
         <span class="secao">Nome da Unidade da Federação ou do Município</span
         >pagos pelo Banco do Brasil, declara que:
       </p>
-
       <div class="opcoes">
         <div class="primeira-opcao">
           <input type="checkbox" name="opcao" id="checkCPF" /> o montante de R$

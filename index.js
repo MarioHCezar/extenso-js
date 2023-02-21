@@ -11,6 +11,7 @@ const pf = document.querySelector("#checkCPF");
 const pj = document.querySelector("#checkCNPJ");
 const select = document.querySelector("select");
 
+
 const nome_dec = document.querySelector(".nome");
 const endereco_dec = document.querySelector(".endereco");
 const documento_dec = document.querySelector(".documento");
@@ -21,6 +22,7 @@ const valor_dec = document.querySelector(".valor");
 const extenso_dec = document.querySelector(".extenso");
 const local_dec = document.querySelector(".local");
 const data_dec = document.querySelector(".data");
+
 botao.classList.add("botao__disabled");
 
 function checkInputs(inputs) {
@@ -31,6 +33,8 @@ function checkInputs(inputs) {
     }
   });
   return filled;
+
+
 }
 
 let inputs = document.querySelectorAll("input");
@@ -42,6 +46,9 @@ inputs.forEach((input) => {
       botao.classList.remove("botao__disabled");
     } else {
       botao.disabled = true;
+
+botao.classList.add("botao__disabled")
+
     }
   });
 });
@@ -61,6 +68,7 @@ botao.addEventListener("click", () => {
     pj.checked = false;
   } else {
     pj.checked = true;
+
     pf.checked = false;
   }
 
@@ -71,6 +79,7 @@ botao.addEventListener("click", () => {
     day: "numeric",
     month: "long",
     year: "numeric",
+
   })}.`;
   print();
 });
