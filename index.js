@@ -10,6 +10,7 @@ const botao = document.querySelector(".botao");
 const pf = document.querySelector("#checkCPF");
 const pj = document.querySelector("#checkCNPJ");
 const select = document.querySelector("select");
+const matricula = document.querySelector("#matricula");
 
 
 const nome_dec = document.querySelector(".nome");
@@ -22,6 +23,7 @@ const valor_dec = document.querySelector(".valor");
 const extenso_dec = document.querySelector(".extenso");
 const local_dec = document.querySelector(".local");
 const data_dec = document.querySelector(".data");
+const matricula_dec = document.querySelector(".matricula_dec");
 
 botao.classList.add("botao__disabled");
 
@@ -82,5 +84,6 @@ botao.addEventListener("click", (e) => {
     year: "numeric",
 
   })}.`;
+  matricula_dec.innerText = matricula.value;
   window.print();
 });
